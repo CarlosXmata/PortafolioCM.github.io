@@ -1,0 +1,280 @@
+/* Importar fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Imagen de fondo */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3; /* Ajusta la opacidad según sea necesario */
+    z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+/* Estilos del encabezado */
+header {
+    background: rgba(30, 60, 114, 0.7); /* Fondo semi-transparente */
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el perfil */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.profile-container {
+    margin-bottom: 1rem;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Cursor de puntero para indicar que es clickeable */
+}
+
+/* Modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8); /* Fondo oscuro con opacidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 50%; /* Tamaño del modal más pequeño */
+    max-width: 600px; /* Tamaño máximo del modal */
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ffd700;
+}
+
+/* Encabezado del perfil */
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.25rem;
+}
+
+/* Navegación */
+nav {
+    background: #343a40;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #495057;
+    color: #ffd700;
+}
+
+nav a.active {
+    background-color: #495057;
+    color: #ffd700;
+}
+
+/* Contenedor principal */
+.container {
+    padding: 5rem 2rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Secciones */
+.section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+    border-bottom: 2px solid #1e3c72;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #1e3c72;
+}
+
+/* Pie de página */
+footer {
+    background: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Información de contacto */
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 0.5rem;
+}
+
+/* Botón de scroll al inicio */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #1e3c72;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+/* ... otros estilos ... */
+
+
+/* Sección de archivos */
+.files-section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.files-section h2 {
+    border-bottom: 2px solid #1e3c72;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #1e3c72;
+}
+
+.files-section a {
+    display: inline-block;
+    margin: 0.5rem 0;
+    color: #1e3c72;
+    text-decoration: none;
+    border: 2px solid #1e3c72;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.files-section a:hover {
+    background-color: #1e3c72;
+    color: #fff;
+}
+
+.files-section a:visited {
+    color: #1e3c72;
+}
+
+.scroll-to-top:hover {
+    background-color: #2a5298;
+    transform: scale(1.1);
+}
+
+/* Experiencia laboral */
+.experience {
+    margin-bottom: 1rem;
+}
+
+.experience h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #1e3c72;
+}
+
+.experience p {
+    margin: 0.5rem 0;
+}
+
+/* Proyectos */
+.project {
+    margin-bottom: 1rem;
+}
+
+.project h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #1e3c72;
+}
+
+.project p {
+    margin: 0.5rem 0;
+}
